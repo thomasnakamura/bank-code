@@ -1,10 +1,9 @@
 import { validator } from './validations/validator';
 
-
 interface iBill {
-    value: string,
-    billType: string
-};
+    value: string;
+    billType: string;
+}
 
 function validateBarcode(value: string) {
     validator(value);
@@ -21,7 +20,7 @@ function validateBarcode(value: string) {
     };
 
     return result;
-};
+}
 
 function generateBarCode(value: string): string {
 
@@ -34,7 +33,7 @@ function generateBarCode(value: string): string {
         value.slice(21, 31);
 
     return barcode;
-};
+}
 
 function getExpirationDate(bill: iBill) {
     const { value, billType } = bill;
@@ -45,19 +44,19 @@ function getExpirationDate(bill: iBill) {
     baseDate.setDate(baseDate.getDate() + parseInt(value.slice(33, 37), 10));
 
     return baseDate.toISOString().slice(0, 10).replace(/-/g, '/');
-};
+}
 
 
 function getAmount(bill: iBill) {
     const { value, billType } = bill;
 
-    const amount = billType === 'BANK' ? value.slice(37) : value.slice(4, 11) + value.slice(12, 16)
+    const amount = billType === 'BANK' ? value.slice(37) : value.slice(4, 11) + value.slice(12, 16);
 
     return Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: 'USD'
     }).format(parseFloat(amount) / 100).slice(1).replace(/,/g, '');
-};
+}
 
 // input con  856900000584030100649158110347945609001374691358
 // input bank 21290001192110001210904475617405975870000002000

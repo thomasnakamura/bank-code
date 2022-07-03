@@ -3,7 +3,7 @@ import {
     Response,
 } from 'express';
 
-import { validateBarcode } from '../services/billService'
+import { validateBarcode } from '../services/billService';
 
 async function billsBarcodeController(req: Request, res: Response) {
     const { value } = req.params;
@@ -15,10 +15,10 @@ async function billsBarcodeController(req: Request, res: Response) {
 
     } catch (error) {
         if (error instanceof Error) {
-            return res.status(400).json(error.message)
+            return res.status(400).json(error.message);
         }
     }
 
-};
+}
 
 export { billsBarcodeController };

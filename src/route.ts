@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { billsBarcodeController } from './controller/billsBarcodeController'
+import { billsBarcodeController } from './controller/billsBarcodeController';
 
 const router = Router();
 
