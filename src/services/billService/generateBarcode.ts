@@ -1,5 +1,15 @@
-function generateBarCode(value: string): string {
+import { iBill } from '../../types';
 
+function generateBarCode({ value, billType }: iBill): string {
+    const barcode = billType === 'BANK'
+        ? generateBankBarCode(value)
+        : generateDealershipBarCode(value);
+
+    return barcode;
+
+}
+
+function generateBankBarCode(value: string) {
     const barcode =
         value.slice(0, 4) +
         value[32] +
@@ -11,4 +21,15 @@ function generateBarCode(value: string): string {
     return barcode;
 }
 
-export { generateBarCode };
+function generateDealershipBarCode(value: string) {
+    const barcode =
+        value.slice(0, 11) +
+        value.slice(12, 23) +
+        value.slice(24, 35) +
+        value.slice(36, 47);
+
+    return barcode;
+}
+
+
+export { generateBarCode, generateBankBarCode, generateDealershipBarCode };

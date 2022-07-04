@@ -1,6 +1,6 @@
 interface iBill {
     value: string;
-    billType: string;
+    billType: 'BANK' | 'DEALERSHIP';
 }
 
 interface iResult {

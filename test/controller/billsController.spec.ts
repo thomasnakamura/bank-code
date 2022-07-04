@@ -1,7 +1,7 @@
 import { billController } from '../../src/controller/billController';
-import { getBill } from '../../src/services/billService';
+import { getBill } from '../../src/services/billService/index';
 
-jest.mock('../../src/services/billService');
+jest.mock('../../src/services/billService/index');
 const mockedResponse: any = {
     json: jest.fn().mockImplementation((result) => {
         jest.fn().mockReturnValue(result);
