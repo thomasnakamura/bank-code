@@ -1,9 +1,8 @@
 import { Router } from 'express';
-import { billsBarcodeController } from './controller/billsBarcodeController';
+import { billController } from './controller/billController';
 
 const router = Router();
 
-router.get('/boleto/:value', billsBarcodeController);
+router.get('/boleto/:value', billController);
 
 export { router };
-
