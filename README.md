@@ -1,15 +1,6 @@
 # Bank API 💰
 
-> **Table of contents**
-> - [💻 Technologies](#technologies)
-> - [🔨 Project setup](#project-setup)
-> - [🐳 Running with docker](#running-docker)
-> - [▶️ Running locally](#running-locally)
-> - [🧪️ Running unit tests](#running-tests)
-> - [🔬 Running coverage](#running-coverage)
-> - [🧹 Running linter](#running-linter)
-
-## <a name="requirements"></a> 💻  Technologies
+## <a name="Technologies"></a> 💻  Technologies
 * [NodeJs](https://nodejs.org/en/)
 * [Express](https://expressjs.com/pt-br/)
 * [Jest](https://jestjs.io/pt-BR/)
