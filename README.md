@@ -1,18 +1,21 @@
 # Bank API 💰
+## ☁️ Deploy
 
-## <a name="Technologies"></a> 💻  Technologies
+-  [PRODUCTION DEPLOY](https://bank-code-api.herokuapp.com/api-docs)
+
+## 💻  Technologies
 * [NodeJs](https://nodejs.org/en/)
 * [Express](https://expressjs.com/pt-br/)
 * [Jest](https://jestjs.io/pt-BR/)
 * [Typescript](https://www.typescriptlang.org/)
 
-## <a name="requirements"></a> 🔍 Requirements
+## 🔍 Requirements
 | Dependencies                                 | Description               |
 | -------------------------------------------- | ------------------------- |
 | [![node-version]][node-download]             | Javascript Runtime        |
 | [![docker-version]][docker-download]         | Virtualization containers |
 
-## <a name="project-setup"></a> 🔨 Project setup
+## 🔨 Project setup
 
 ```bash
 # Clone repository
@@ -24,32 +27,32 @@ git clone https://github.com/thomasnakamura/bank-code.git
 npm install
 ```
 
-## <a name="running-docker"></a> 🐳 Running with docker
+## 🐳 Running with docker
 
 ```bash
 docker build -t bank-code .
 docker run -p 3000:3000 -d bank-code
 ```
 
-## <a name="running-locally"></a> ▶️ Running locally
+## ▶️ Running locally
 
 ```bash
 npm run start
 ```
 
-## <a name="running-tests"></a> 🧪️ Running unit tests
+## 🧪️ Running unit tests
 
 ```bash
 npm run test
 ```
 
-## <a name="running-coverage"></a> 🔬 Running coverage
+## 🔬 Running coverage
 
 ```bash
 npm run test:cov
 ```
 
-## <a name="running-linter"></a> 🧹 Running linter
+## 🧹 Running linter
 
 ```bash
 npm run lint

@@ -4,6 +4,7 @@ info:
   description: 'bank-api'
   version: 1.0.0
 servers:
+- url: https://bank-code-api.herokuapp.com/
 - url: http://localhost:3000
 paths:
     /boleto/{value}:
